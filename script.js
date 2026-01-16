@@ -72,3 +72,49 @@ return matchingImage
 console.log(DisplayImage("Arches"))
 
 
+// Park name gives description AND date established AND area AND visitors (case sensitive as well)
+// park {string} - name of the park
+// returns {string} - description of the park
+function getParkInfo(park){
+  for(var i = 0; i < parkName.length; i++){
+    if(parkName[i].toLowerCase() == park.toLowerCase()){
+        return description[i] + " It was established on " + birth[i] + ", covers an area of " + area[i] + " acres, and had " + visitors[i] + " visitors in 2019.";
+    }
+  }
+  return "No park found."
+}
+
+console.log(getParkInfo("arches"));
+
+//If the user inputs a number greater than the minimum visitor count of at least one park,
+// the function returns a list of park names that meet or exceed that number
+// minVisitors {number} - minimum number of visitors
+// returns {list} - list of park names with at least minVisitors visitors
+function getParksByVisitors(minVisitors){
+  var parksList = [];
+  var maxVisitors = 0;
+
+  for (var i = 0; i < visitors.length; i++) {
+    var numVisitors = parseInt(visitors[i]);
+    if (numVisitors > maxVisitors) {
+      maxVisitors = numVisitors;
+    }
+  }
+
+  if(minVisitors > maxVisitors) {
+    return "Error: Number of visitors is too large. No parks meet this criteria.";
+  }
+
+  for (var i = 0; i < visitors.length; i++){
+    var numVisitors = parseInt(visitors[i]);
+    if (numVisitors >= minVisitors){
+      parksList.push(parkName[i]);
+    }
+  }
+
+  return parksList;
+}
+console.log(getParksByVisitors(5500000));
+
+
+
