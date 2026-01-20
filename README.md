@@ -3,8 +3,7 @@ Mod 3 Project Nayan & Justin
 #
 ##### Area in acres gives a list of park names with at least that area.
 ###### @param Acres {number} - the minimum park size in acres
-###### @return bigArea {List} - A list of park names that are larger than the given area.
-// // If no parks are found, it returns a message.
+###### @return bigArea {List} - A list of park names that are larger than the given area. If no parks are found, it returns a message.
 **` function getbigArea(Acres) `**
 #
 ##### The state name gives list of park names inside of that state.
