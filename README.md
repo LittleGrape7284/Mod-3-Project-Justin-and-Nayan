@@ -8,12 +8,12 @@ Mod 3 Project Nayan & Justin
 #
 ##### The state name gives list of park names inside of that state.
 ###### @param States {String} - the name of the state to search for
-###### @return matchingStates {List} - An array of park names found in that state
+###### @return matchingStates {List} - An list of park names found in that state
 **` function ParkNames(States) `**
 #
 ##### Inserting the park name gives an image of the National Park.
 ###### @param parkPic {String} - the name of the park to search for
-###### @return matchingImage {String} - An array containing the image URL(s) for the matching park.
+###### @return matchingImage {String} - An list containing the image URL(s) for the matching park.
 **` function DisplayImage(parkPic) `**
 #
 ##### Park name gives description AND date established AND area AND visitors
